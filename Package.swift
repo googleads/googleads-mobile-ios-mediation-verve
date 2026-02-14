@@ -25,11 +25,18 @@ let package = Package(
       targets: ["VerveAdapterTarget"]
     )
   ],
+  dependencies: [
+    .package(
+      url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      from: "12.0.0"
+    )
+  ],
   targets: [
     .target(
       name: "VerveAdapterTarget",
       dependencies: [
         .target(name: "Adapter"),
+        .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
       ],
       path: "VerveAdapterTarget"
     ),
