@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 
 // Copyright 2025 Google LLC.
 //
@@ -18,7 +18,7 @@ import PackageDescription
 
 let package = Package(
   name: "VerveAdapter",
-  platforms: [.iOS(.v12)],
+  platforms: [.iOS(.v13)],
   products: [
     .library(
       name: "VerveAdapterTarget",
@@ -27,24 +27,29 @@ let package = Package(
   ],
   dependencies: [
     .package(
+      url: "https://github.com/vervegroup/hybid-ios-spm-sdk.git",
+      exact: "3.7.1"
+    ),
+    .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-      from: "12.0.0"
-    )
+      from: "13.0.0"
+    ),
   ],
   targets: [
     .target(
       name: "VerveAdapterTarget",
       dependencies: [
-        .target(name: "Adapter"),
+        .target(name: "VerveAdapter"),
+        .product(name: "HyBid", package: "hybid-ios-spm-sdk"),
         .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
       ],
       path: "VerveAdapterTarget"
     ),
     .binaryTarget(
-      name: "Adapter",
+      name: "VerveAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/Verve/VerveAdapter-3.2.0.0.zip",
-      checksum: ""
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/verve/VerveAdapter-3.7.1.3.zip",
+      checksum: "a39f60adca8ab26ddfdf22cef099431a37e9208a938e4437ac01cbedf42d25ca"
     ),
   ]
 )
