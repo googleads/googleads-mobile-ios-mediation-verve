@@ -28,7 +28,7 @@ let package = Package(
   dependencies: [
     .package(
       url: "https://github.com/vervegroup/hybid-ios-spm-sdk.git",
-      exact: "3.7.1"
+      exact: "3.8.0"
     ),
     .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
@@ -48,7 +48,7 @@ let package = Package(
     .binaryTarget(
       name: "VerveAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/verve/VerveAdapter-3.7.1.3.zip",
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/verve/VerveAdapter-3.8.0.0.zip",
       checksum: "a39f60adca8ab26ddfdf22cef099431a37e9208a938e4437ac01cbedf42d25ca"
     ),
   ]
