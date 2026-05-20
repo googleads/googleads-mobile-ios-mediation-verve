@@ -49,7 +49,7 @@ let package = Package(
       name: "VerveAdapter",
       url:
         "https://dl.google.com/googleadmobadssdk/mediation/ios/verve/VerveAdapter-3.8.1.0.zip",
-      checksum: "c60fc855b1b95bf3d0073610886d02e729e1b2835215d594c699516c2b313c4f"
+      checksum: "c07475c5ac06e69a0cbd069694ba279ef86a20070e539a102f91a85753ba4fdc"
     ),
   ]
 )
